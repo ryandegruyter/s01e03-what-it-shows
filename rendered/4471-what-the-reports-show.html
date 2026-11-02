@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>#4471 · what the reports show · support kb</title>
+  <style>
+    :root {
+      --bg: #fbfaf7; --fg: #1d1d1b; --muted: #6b6a66; --line: #e3e0d8;
+      --accent: #2f6f5e; --warn: #b4501f; --warn-bg: #fbeee6; --note-bg: #eef5f2;
+      --mono: ui-monospace, 'Cascadia Code', Menlo, monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #171716; --fg: #ecebe6; --muted: #9c9a93; --line: #34332f;
+        --accent: #6fbfa6; --warn: #f0905d; --warn-bg: #3a2418; --note-bg: #1d2c27;
+      }
+    }
+    body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, sans-serif; }
+    .kb table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.92rem; }
+    .kb th, .kb td { border-bottom: 1px solid var(--line); padding: 0.35rem 0.5rem; text-align: left; }
+    .kb code { font-family: var(--mono); font-size: 0.88em; }
+    .kb a { color: var(--accent); }
+    .kb { max-width: 760px; margin: 0 auto; padding: 2rem 16px 4rem; }
+    .crumb { font: 0.8rem var(--mono); text-decoration: none; color: var(--muted); }
+    h1 { margin: 0.25rem 0 0.5rem; line-height: 1.2; }
+    .meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; color: var(--muted); font-size: 0.85rem; margin: 0; }
+    .status { border: 1px solid var(--line); border-radius: 99px; padding: 0 0.6rem; }
+    .stale { color: var(--warn); font-weight: 600; }
+    .banner { background: var(--warn-bg); color: var(--warn); padding: 0.6rem 1rem; border-radius: 6px; }
+    footer { margin-top: 3rem; color: var(--muted); font-size: 0.8rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+    aside { border-left: 4px solid var(--accent); padding: 0.5rem 1rem; margin: 1rem 0; background: var(--note-bg); }
+    aside.warn { border-color: var(--warn); background: var(--warn-bg); }
+    .sum { font-size: 1.1rem; }
+    .note { color: var(--muted); font-size: 0.85em; }
+    .stamp { margin: 2rem 0 0; font: 0.85rem var(--mono); color: var(--muted); }
+    .stamp b { color: var(--accent); letter-spacing: 0.04em; }
+  </style>
+</head>
+<body>
+  <div class="kb">
+    <header>
+      <a class="crumb" href="/kb">support desk · kb</a>
+      <h1>#4471 · what the reports show</h1>
+      <p class="meta">
+        <span>owner <b>Ryan de Gruyter</b></span>
+        <span class="status filed">filed</span>
+        <span>reviewed 2026-11-02 · 0 days ago</span>
+      </p>
+    </header>
+    
+    <main>
+      <p>#4471 merged every report below into one known parser bug. The reports are more than one problem. The table separates them from the export, and every count in it is computed from those reports.</p>
+      <aside class="warn">Marked known, filed as one issue. The table is the split.</aside>
+      <p class="sum"><strong>412</strong> reports merged into #4471 · <strong>5</strong> problems</p>
+      <table>
+        <thead>
+          <tr><th>problem</th><th>reports</th><th>tenants</th><th>seen</th></tr>
+        </thead>
+        <tbody>
+<tr>
+        <td><code>parser</code></td>
+        <td>374</td>
+        <td>11</td>
+        <td>2026-04-01 → 2026-10-04</td>
+      </tr>
+<tr>
+        <td><code>hint</code></td>
+        <td>33</td>
+        <td>3</td>
+        <td>2026-04-17 → 2026-09-22</td>
+      </tr>
+<tr>
+        <td><code>one-day</code></td>
+        <td>3</td>
+        <td>3</td>
+        <td>2026-04-02 → 2026-10-04</td>
+      </tr>
+<tr>
+        <td><code>early</code></td>
+        <td>1</td>
+        <td>1</td>
+        <td>2026-04-20 → 2026-04-20</td>
+      </tr>
+<tr>
+        <td><code>timezone</code></td>
+        <td>1</td>
+        <td>1</td>
+        <td>2026-06-12 → 2026-06-12</td>
+      </tr>
+        </tbody>
+      </table>
+  <p class="note"><code>parser</code> · harbour.dental ×52 · kettle.books ×46 · nine.lanterns ×43 · morrow.tax ×40 · long.table ×39 · ridge.clinic ×36 · stone.and.sons ×30 · lantern.row ×27 · alder.physio ×22 · pale.harbour ×20 · copper.studio ×19</p>
+
+  <p class="note"><code>hint</code> · alder.physio ×12 · copper.studio ×11 · pale.harbour ×10</p>
+
+  <p class="note"><code>one-day</code> · alder.physio ×1 · kettle.books ×1 · lantern.row ×1</p>
+<ul>
+        <li><code>R-41202</code> Invite says Tuesday 12 May. Calendar says Monday 11 May. My client turned up on the Monday. We had coffee.</li>
+        <li><code>R-41209</code> Every booking in June is one day off. Only June. Why only June.</li>
+        <li><code>R-41620</code> Tuesday 6 October showed as Monday. I moved it myself. I have stopped reporting these but my colleague says it helps you.</li>
+    </ul>
+  <p class="note"><code>early</code> · nine.lanterns ×1</p>
+<ul>
+        <li><code>R-41236</code> The invite arrived before I made the booking. I would like to know how.</li>
+    </ul>
+  <p class="note"><code>timezone</code> · pale.harbour ×1</p>
+<ul>
+        <li><code>R-41344</code> Client in Lisbon got Tuesday. Client in Toronto got Monday. Same meeting. We held it twice.</li>
+    </ul>
+      <h2>Parser</h2>
+      <p>The shared parser reads a date month first. These tenants write the day first, so the month and the day trade places. Reports that come in through the booking-v2 form stay in this group: that form already prints <code>DD/MM/YYYY</code>, and the parser behind it is still the month-first reader.</p>
+      <h2>Hint</h2>
+      <p>booking-v3 prints <code>MM/DD/YYYY</code> under the date field. The tenant writes the day first, and the form reads the field the tenant's way. This group is the form channel only. App and email from the same tenants stay with the parser.</p>
+      <h2>One day</h2>
+      <p>The date moves by one day and the month stays put. One of these reports says the move happens only in June.</p>
+      <h2>Before the booking</h2>
+      <p>The invite reached the tenant before the booking existed.</p>
+      <h2>Two cities</h2>
+      <p>The same meeting was Tuesday in Lisbon and Monday in Toronto.</p>
+      <p class="stamp">desk ref <b>DR-Y40V-YA5W</b></p>
+    </main>
+    <footer>Pages are written by people. Tables and charts are built from data at render time.</footer>
+  </div>
+</body>
+</html>

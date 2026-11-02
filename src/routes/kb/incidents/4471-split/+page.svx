@@ -1,0 +1,44 @@
+---
+layout: runbook
+title: '#4471 · what the reports show'
+owner: Ryan de Gruyter
+status: filed
+reviewed: 2026-11-02
+signature: Ryan de Gruyter
+---
+
+<script>
+  import Callout from '#lib/kb/Callout.svelte';
+  import ProblemTable from '#lib/kb/ProblemTable.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+#4471 merged every report below into one known parser bug. The reports are more than one problem. The table separates them from the export, and every count in it is computed from those reports.
+
+<Callout kind="warn">
+Marked known, filed as one issue. The table is the split.
+</Callout>
+
+<ProblemTable ticket={4471} />
+
+## Parser
+
+The shared parser reads a date month first. These tenants write the day first, so the month and the day trade places. Reports that come in through the booking-v2 form stay in this group: that form already prints `DD/MM/YYYY`, and the parser behind it is still the month-first reader.
+
+## Hint
+
+booking-v3 prints `MM/DD/YYYY` under the date field. The tenant writes the day first, and the form reads the field the tenant's way. This group is the form channel only. App and email from the same tenants stay with the parser.
+
+## One day
+
+The date moves by one day and the month stays put. One of these reports says the move happens only in June.
+
+## Before the booking
+
+The invite reached the tenant before the booking existed.
+
+## Two cities
+
+The same meeting was Tuesday in Lisbon and Monday in Toronto.
+
+<RenderStamp {signature} />
